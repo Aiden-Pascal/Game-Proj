@@ -1,0 +1,27 @@
+.title {font-size:50px;
+}
+
+body {
+      text-align: center;
+background-color:grey;
+}
+img {
+  text-align:center;
+  width:550px;
+  length:350px;
+  
+} 
+.screen {
+  display: none;
+}
+.screen.active {
+  display: block;
+}
+
+button {border-radius:7px;
+  border-color:black;
+  border-width:5px;
+  background-color:silver;
+  font-family:cursive;
+  border-style:outset;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dungeon Adventure</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Opening of your story -->
+  <div id="title" class="screen active">
+    <h3>Crumbling Dark Dungeons</h3>
+    <div class="images">
+      <img src="https://cdn.openart.ai/uploads/image_cs0CphiV_1691191474835_512.webp">
+    </div>
+    <p>You find yourself on a ruined path leading to a cave opening...</p>
+    
+    <div class="buttons">
+      <button onclick="showScreen('screen1')">Inspect The Entrance</button>
+      <button onclick="showScreen('screen2')">Try Opening the Door</button>
+      <button onclick="showScreen('coward')">Turn Back</button>
+    </div>
+  </div>
+
+  <!-- Story continuation -->
+  <div id="screen1" class="screen">
+    <h1>You decide to look around first...</h1>
+    <div class="images">
+      <img src="https://thumbs.dreamstime.com/b/old-gold-key-14486910.jpg">
+      <p>You find what looks like a key, possibly for the door. Try it?</p>
+      <div class="buttons">
+        
+        <button onclick="showScreen('loudStart')">Use Force</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="screen2" class="screen">
+    <h1>You approach the door and give it a light push...</h1>
+    <div class="images">
+      <img src="https://img.freepik.com/premium-photo/dark-cave-with-large-wooden-door-middle_905510-3973.jpg">
+      <p>The door is solid and unmoving...</p>
+      <div class="buttons">
+        <button onclick="showScreen('loudStart')">Ram into the Door</button>
+        <button onclick="showScreen('screen1')">Inspect The Entrance</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="coward" class="screen">
+    <h1>You decide to turn back, maybe it isn't worth it. [Coward 1/4]</h1>
+    <div class="images">
+      <img src="https://s0.geograph.org.uk/geophotos/05/67/52/5675238_3903ef96.jpg">
+      <div class="buttons">
+      <button onclick="showScreen('title')">Start Again</button>
+  </div>
+  </div>
+  </div>
+
+ 
+  <!--Between lines 29-32, put the end of the story if the user chose option 1-->
+  <div id="quietStart" class="screen">
+    <h1>The door swings open quietly, revealing a dark corridor.. </h1>
+    <img src="https://as1.ftcdn.net/v2/jpg/01/93/48/40/1000_F_193484015_qJoYnUZrobyFiOiDbqT86khrw8BkG41w.jpg">
+    <div class="buttons">
+   <button onclick="showScreen('quietOne')">Proceed</button>
+  </div>
+  </div>
+  <!--Between lines 29-32, put the end of the story if the user chose option 2-->
+  <div id="loudStart" class="screen">
+    <h1>The door loudly crumbles under your weight, revealing a corridor. </h1>
+    <img src="https://as1.ftcdn.net/v2/jpg/01/93/48/40/1000_F_193484015_qJoYnUZrobyFiOiDbqT86khrw8BkG41w.jpg">
+     <div class="buttons">
+   <button onclick="showScreen('loudOne')">Proceed</button>
+    </div>
+  </div>
+      
+    <div id="loudOne" class="screen">
+    <h1>As you travel down the corridor... </h1>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/617734f0-d067-462d-bafe-1e2ba1854bec/da6fwf6-68284d53-18e1-4ff3-b8c0-10c83182b768.jpg/v1/fill/w_1024,h_576,q_75,strp/catacombs_by_noldofinve_da6fwf6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvNjE3NzM0ZjAtZDA2Ny00NjJkLWJhZmUtMWUyYmExODU0YmVjXC9kYTZmd2Y2LTY4Mjg0ZDUzLTE4ZTEtNGZmMy1iOGMwLTEwYzgzMTgyYjc2OC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.vIYCXbqkkTmCcLGa6WPUHm4Qq0LQjlwpRNd-hQRbD5w">
+          <p> There is an unmistakable scuttling sounud behind you..
+             <div class="buttons">
+   <button onclick="showScreen('loudTwoa')">Run Away</button>
+<button onclick="showScreen('loudTwob')">Turn to Fight</button>
+    
+    </div>
+       </div>
+  <div id="loudTwoa" class="screen">
+    <h1>You rush down the corridor tring to escape.. </h1>
+    <img src="https://img.freepik.com/premium-photo/old-medieval-castle-dungeon-hall-with-flame-light-torches-spooky-caged-door-generative-ai_21085-32573.jpg">
+             <p> But are eventually faced with a dead end. There's only one option. </p>
+             <div class="buttons">
+  <button onclick="showScreen('loudTwob')">Turn to Fight</button>
+    </div>
+  </div>
+              <div id="loudTwob" class="screen">
+    <h1>You turn around... </h1>
+    <img src="https://img.freepik.com/premium-photo/giant-spider-fantasy-image-ai-generated-art_856480-79.jpg">
+                <p> Revealing a large spider staring back.
+                 <div class="buttons">
+   <button onclick="showScreen('loudThree')">Confront It</button>
+             </div>
+  </div>
+    
+  <div id="loudThree" class="screen">
+    <h1>Time to fight</h1>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8ffddad1-27ee-48e1-a653-bed5c4fce600/dgt8x4s-a17a8753-abaf-4bbe-9e37-a03073af240f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhmZmRkYWQxLTI3ZWUtNDhlMS1hNjUzLWJlZDVjNGZjZTYwMFwvZGd0OHg0cy1hMTdhODc1My1hYmFmLTRiYmUtOWUzNy1hMDMwNzNhZjI0MGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-zHbDIkNXzFmAGgys0BoPtlou50Uq6IqbszC0DKT0T8">
+                       <div class="buttons">
+      <button onclick="showScreen('defend')">Defend Yourself</button>
+    <button onclick="showScreen('survival')">Aim for its Eyes</button>
+     <button onclick="showScreen('abdomen')">Attack its Stomach</button>   
+                          </div>                                                                   
+             </div>                                  
+  
+   <div id="defend" class="screen">
+    <h1>Time to fight..</h1>
+    <img src="https://openclipart.org/download/339018/shield.svg">
+     <p> You block the spider's strike as you try to come up with a form of attack. </p>
+                       <div class="buttons">
+   <button onclick="showScreen('defend')">Defend Yourself</button>
+    <button onclick="showScreen('survival')">Aim for its Eyes</button>
+     <button onclick="showScreen('abdomen')">Attack its Stomach</button>            
+                          </div>                                                                   
+             </div>           
+  
+   <div id="abdomen" class="screen">
+    <h1>Time to Fight..</h1>
+    <img src="https://live.staticflickr.com/8302/7777098348_99d614c1e1_w.jpg">
+     <p> You strike at the spider's stomach, but its just out of reach. </p>
+                       <div class="buttons">
+      <button onclick="showScreen('defend')">Defend Yourself</button>
+    <button onclick="showScreen('survival')">Aim for its Eyes</button>
+     <button onclick="showScreen('abdomen')">Attack its Stomach</button>         
+                          </div>                                                                   
+             </div>           
+  
+             <div id="survival" class=screen>
+    <h1>With the spider defeated..[Survival (2/4)] </h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREVbZw-ekeqAaAWXx-BDm52Vm1YOGue93rsDLOyGXCBQu8meQCwD_3DwaoIcBjBfRr42M&usqp=CAU">
+<p> With the spider defeated, you gain newfound confidence. Weapon in hand, you descend to see whatever may await next.
+   <div class="buttons">
+      <button onclick="showScreen('title')">Start Again</button>
+  </div>
+    </div>                                                     
+      <div id="quietOne" class=screen>
+    <h1>As you travel down the corridor..</h1>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/617734f0-d067-462d-bafe-1e2ba1854bec/da6fwf6-68284d53-18e1-4ff3-b8c0-10c83182b768.jpg/v1/fill/w_1024,h_576,q_75,strp/catacombs_by_noldofinve_da6fwf6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvNjE3NzM0ZjAtZDA2Ny00NjJkLWJhZmUtMWUyYmExODU0YmVjXC9kYTZmd2Y2LTY4Mjg0ZDUzLTE4ZTEtNGZmMy1iOGMwLTEwYzgzMTgyYjc2OC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.vIYCXbqkkTmCcLGa6WPUHm4Qq0LQjlwpRNd-hQRbD5w">  
+                                                                                                             <p> You hear distant scuttling. Not close enough to be a concern however.. </p>    
+                                                                                                                 <div class="buttons">
+   <button onclick="showScreen('quietExplore')">Explore the Corridor</button>
+   <button onclick="showScreen('hallway')">Inspect The Corridor</button>
+                         </div>
+                         </div>
+                         <div id="quietExplore" class=screen>
+    <h1>You begin to walk up the stairs.. </h1>
+    <img src="https://media.sketchfab.com/models/6086e740df0f449f8fb1a3e5fbb59f4b/thumbnails/ea00643632444d2c8c225b97433004f1/3bca7543c8694c519843eb3987a72b1f.jpeg">   
+     <p> You find a chest at the end of the hall. You decide to..</p>                     
+                           <div class="buttons">
+   <button onclick="showScreen('mimic')">Open It</button>
+                           <button onclick="showScreen('hallway')">Inspect The Corridor</button>
+                           </div>
+  </div>
+  
+                           <div id="mimic" class=screen>
+    <h1>You open up the chest..(Mimic[3/4])</h1>
+    <img src="https://pbs.twimg.com/media/EBNp9TfX4AEScLE.jpg">   
+<p>To reveal rows of sharp teeth. It lunges forwards and everything goes black. 
+   <div class="buttons">
+      <button onclick="showScreen('title')">Start Again</button>
+  </div>
+  </div>
+                             <div id="hallway" class=screen>
+    <h1>Looking around the corridor..</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ShcW-j6UXJwEvw3n1kRqyraEkxU_B8_CoPMwWoXJaMwG3H5R4KAFIjJ4Za68xezR8WA&usqp=CAU"> 
+                           <p> You discover a lever. Pull it or walk away?
+    <div class="buttons">
+    <button onclick="showScreen('saved')">Pull it</button>
+  <button onclick="showScreen('quietExplore')">Walk Away</button> 
+                             </div>
+                             </div>
+                                                                    <div id="saved" class=screen>
+    <h1>You pull the lever..(Saved[4/4])</h1>
+    <img src="https://img.freepik.com/premium-vector/vector-cartoon-flying-boho-arrow_290335-484.jpg">
+      <p> There is a whistling noise like arrows straking by. You see a chest at the end of the hall with sharp teeth had been impaled by a trap. </p>   
+                                                                       <div class="buttons">
+      <button onclick="showScreen('title')">Start Again</button>
+  </div>
+                                                                    
+                             </div>
+                                           
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function showScreen(screenId) {
+        const screens = document.querySelectorAll(".screen");
+        screens.forEach(screen => {
+          screen.classList.remove("active");
+        });
+        const activeScreen = document.getElementById(screenId);
+        if (activeScreen) {
+          activeScreen.classList.add("active");
+        }
+      }
+      showScreen("title");
+      window.showScreen = showScreen;
+    });
+  </script>
+
+</body>
+</html>
